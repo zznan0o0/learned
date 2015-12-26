@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<style>
+body,ul,li{ margin: 0; padding: 0; border: 0; }
+#container{ height: 477px; margin: 0 auto; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; overflow: hidden; position: relative; }
+#container li{ position: absolute; left: 0; border-left: 1px solid #ccc; width: 300px; height: 400px; }
+
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		//容器对象
+		var box = document.getElementById('container');
+
+		//获得标签nodelist对象集合
+		var lis = box.getElementsByTagName('li');
+
+		//定义宽度
+		var liWidth = lis[0].offsetWidth;
+
+		//设置露出宽度
+		var exposeWidth = 150;
+
+		//设置容器的总宽度
+		var boxWidth = liWidth + (lis.length - 1) * exposeWidth;
+		box.style.width = boxWidth + 'px';
+
+		//设置每倒门的初始值
+		function lisinit() {
+			for (var i = 1, len = lis.length; i < len; i++) {
+				lis[i].style.left = liWidth + exposeWidth * (i - 1) + 'px';
+			}
+		}
+
+		lisinit();
+
+		//计算每倒门打开时的移动距离
+		var translate = liWidth - exposeWidth;
+
+		//为每倒门绑定事件
+		for (var i = 0,len = lis.length; i<len; i++) {
+			(function(i) {
+				lis[i].onmouseover = function() {
+					//复位
+					lisinit();
+					//open
+					for (var j = 1; j <= i; j++) {
+						lis[j].style.left = parseInt(lis[j].style.left, 10) - translate + 'px';
+					}
+				}
+			})(i)
+		}
+	}
+</script>
+</head>
+<body>
+	<ul id="container">
+		<li style="background: red;"></li>
+		<li style="background: yellow;"></li>
+		<li style="background: blue;"></li>
+		<li style="background: green;"></li>
+	</ul>
+</body>
+</html>

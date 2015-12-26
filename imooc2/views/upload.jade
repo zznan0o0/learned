@@ -1,0 +1,12 @@
+extends layout
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method="post",action="/upload",enctype="multipart/form-data")
+    label 账号
+    input(name="name",type="text")
+    label 密码
+    input(name="content",type='file')
+    input(type="submit",value="提交")

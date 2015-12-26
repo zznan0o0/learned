@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function f1(){
+		var n = 999;
+		console.log('aaaa');
+		nadd = function(){
+			n++;
+		}
+		function f2(){
+			console.log(n);
+		}
+		return f2
+	}
+
+	var result = f1();
+	result();
+	nadd();
+	result();
+</script>
+</body>
+</html>

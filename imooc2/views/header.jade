@@ -1,0 +1,8 @@
+a(href="/") 首页
+if user
+	span 欢迎您，#{user.name}
+	span &nbsp;|&nbsp;
+	a(href="/logout") 注销
+else
+	a(href="/signin") 登录
+	a(href="/signup") 注册

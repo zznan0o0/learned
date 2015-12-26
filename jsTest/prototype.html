@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+function Person(name,age){
+	this.name=name;
+	this.age=age;
+};
+
+Person.prototype.hi=function(){
+	console.log('HI,my name is '+this.name+',I’m '+this.age+' year old now');
+};
+
+Person.prototype.LEGS_NUM=2;
+Person.prototype.ARMS_NUM=2;
+
+Person.prototype.walk=function(){
+	console.log(this.name+' is walking.....');
+};
+
+function Student(name,age,className){
+	Person.call(this,name,age);
+	this.className=className;
+};
+
+Student.prototype=Object.create(Person.prototype);
+Student.prototype.constructor=Student;
+
+Student.prototype.hi=function(){
+	console.log('hi,my name is '+this.name+' I’m '+this.age+' year old now,and from '+this.className);
+};
+
+Student.prototype.learn=function(subject){
+	console.log(this.name+' is learning '+subject+' at '+this.className);
+};
+//test
+/*var bosn=new Student('bosn',18,'grade1');
+bosn.hi();
+console.log(bosn.LEGS_NUM);
+bosn.walk();
+bosn.learn('math')
+console.log(Person.prototype);
+console.log(Student.prototype);*/
+</script>
+</body>
+</html>

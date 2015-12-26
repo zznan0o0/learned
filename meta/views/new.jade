@@ -1,0 +1,9 @@
+extends layout
+include ./login
+block content
+	form(method='post',action='/new')
+		span 名称
+		input(name='name',type='text')
+		span 海报地址
+		input(name='poster',type='text')
+		input(type='submit',value='提交')

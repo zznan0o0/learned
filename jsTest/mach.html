@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	console.log(Math.max(4,3));
+	console.log(Math.min(4,3));
+	console.log(Math.ceil(4.2));
+	var red = Math.ceil(Math.random()*255);
+	var green = Math.ceil(Math.random()*255);
+	var blue = Math.ceil(Math.random()*255);
+	var color = '#'+red.toString(16)+green.toString(16)+blue.toString(16);
+	function a(){
+		var red = Math.ceil(Math.random()*255);
+		var green = Math.ceil(Math.random()*255);
+		var blue = Math.ceil(Math.random()*255);
+		var color = '#'+red.toString(16)+green.toString(16)+blue.toString(16);
+		document.getElementById('aaa').style.color = color;
+	}
+</script>
+<span id="aaa" style="font: bold;">变色</span>
+<button id="aa" onclick="a()">变色</button>
+</body>
+</html>

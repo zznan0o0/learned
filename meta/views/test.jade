@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		title=title
+		script(src='/jquery-2.1.4.min.js')
+	body
+		input(id='a1')
+		input(type='submit',value='check',id='a2')
+		script.
+			var allTime = 0;
+			setInterval(
+				function(){
+					allTime ++
+				},1000);
+			window.onbeforeunload = function(){
+				$.ajax({
+					url:'/test2',
+					type:'get',
+					data:{time:allTime},
+					dataType:'json',
+					success:'success'
+				});
+			}

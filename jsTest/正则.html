@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var a = 'BeiJing is not big city';
+	var aS = a.search(/jing/i);
+	var aS2 = a.search(/jing/);
+	console.log(aS);
+	console.log(aS2);
+
+	var aR = a.replace(/jing/i,'hai');
+	console.log(aR);
+
+	var b = '1+2=3';
+	var bM = b.match(/\d+/g);
+	console.log(bM);
+
+	var c = '1 ,2 ,3 ';
+	var cS = c.split(',');
+	console.log(cS);
+
+	var cS2 = c.split(/\s*,\s*/);
+	console.log(cS2);  
+</script>
+
+</body>
+</html>

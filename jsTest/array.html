@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var a = [11,22];
+	//push +after
+	a.push('a');
+	console.log(a);
+	//unshift +befor
+	a.unshift('b');
+	console.log(a);
+	//pop -after
+	a.pop();
+	console.log(a);
+	//shift -befor
+	a.shift();
+	console.log(a);
+
+	var b = [11,22,33,44];
+	//join() 转换字符串
+	console.log(b.join(';'));
+	//reverse() 改变顺序
+	console.log(b.reverse());
+	//concat() 连接数组
+	console.log(b.concat(a));
+
+	var c = [1,2,3,4];
+	//slice 从第几个数起取数组  [)
+	console.log(c.slice(0,3));
+	var d = [1,2,3,4,5,6,7,8,9];
+	//splice 删除 插入 
+	//从n开始删除
+	console.log(d.splice(2));
+	console.log(d);
+	//从4开始删除2个
+	var e = [1,2,3,4,5,6,7,8,9];
+	console.log(e.splice(4,2));
+	console.log(e);
+	//从4开始删除2个插入一个数
+	var f = [1,2,3,4,5,7,6];
+	console.log(f.splice(4,2,'sfsdfsd'));
+	console.log(f);
+
+	//tostring
+	var g = [1,2,3,4,5];
+	console.log(g.toString());
+	console.log(g);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<% include common/header.html %>
+<dl>
+	<dt><span>id</span><span>|title</span><span>|author</span><span>|content</span></dt>
+	<%list.forEach(function(list){%>
+	<dd><span><%=list._id%></span>|<a href="/blog/<%=list._id%>"><span><%=list.title%></span></a>|<a href="/user/<%=list.author.id%>"><span><%=list.author.name%></span></a>|<span><%=list.content%></span></dd>
+	<%})%>
+</dl>
+
+<% include common/footer.html %>

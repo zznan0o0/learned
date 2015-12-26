@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+/*	var man={
+		name:'SB',
+		weibo:'@SB',
+		get age(){
+			return new Date().getFullYear()-1088;
+		},
+		set age(val){
+			console.log('Age can’t be set to '+val)
+		}
+	};*/
+var man={
+	name:'SB',
+	weibo:'@SB',
+	$age:null,
+	get age(){
+		if(this.$age == undefined){
+			return new Date().getFullYear()-1000;
+		}
+		else{
+			return this.$age;
+		}
+	},
+	set age(val){
+		val =+ val;
+		if(! isNaN(val) && val>0 && val<150){
+			this.$age =+ val;
+		}
+		else{
+			throw new Error('incorrect val ='+val);
+		}
+	}
+};
+</script>
+</body>
+</html>

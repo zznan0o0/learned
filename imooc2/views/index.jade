@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each item in uploads
+    a(href='/')
+      img(src='#{item.file}')
+      p #{item.name}

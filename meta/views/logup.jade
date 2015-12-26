@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	form(method='post',action='/logup')
+		span 账号
+		input(name='name',type='text')
+		span 密码
+		input(name='password',type='password')
+		input(type='submit',value='提交')

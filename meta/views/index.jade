@@ -1,0 +1,11 @@
+extends layout
+include ./login
+block content
+	h1= title
+	p Welcome to #{title}
+	ul
+		each item in goods
+			li
+				a(href="/goods/#{item._id}")
+					img(src="#{item.poster}")
+					h3 #{item.title}

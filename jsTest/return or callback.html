@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function add(x){
+		return x+1;
+	}
+	console.log('这里是return：'+add(2));
+	function find(x,result){
+		result=add(x);
+		console.log('这里是函数执行过程'+result);
+		return result*x;
+		console.log('这里是函数执行结果'+result*x);
+	}
+	console.log('这里是回调'+find(3,6));
+</script>
+
+</body>
+</html>

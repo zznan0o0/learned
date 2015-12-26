@@ -1,0 +1,9 @@
+extends layout
+include ./login
+block content
+	ul
+		each item in meta
+			li
+				span 用户 #{item.userid} |
+				span 商品 #{item.goodsid} |
+				span 停留时间 #{item.detailtime}

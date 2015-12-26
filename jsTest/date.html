@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var date = new Date()
+	console.log(Date);
+	console.log(date);
+	var year = date.getFullYear();
+	var month = date.getMonth() + 1;
+	var day = date.getDay();
+	var hour = date.getHours();
+	var minute = date.getMinutes();
+	var second = date.getSeconds();
+	var str = '';
+</script>
+<select>
+	<script type="text/javascript">
+	for(var i = 1900; i <= year; i++){
+		if(i == year){
+			document.write('<option selected>'+ i +'</option>')
+		}
+		else{
+			document.write('<option>'+ i +'</option>')
+		}
+	}
+	</script>
+</select>
+
+</body>
+</html>
